@@ -84,6 +84,7 @@ function App() {
       toast.success(`Added ${item}`, {
         });
       getFoodList()
+      setItem('')
 
     }
   }
@@ -136,7 +137,7 @@ function App() {
         <form onSubmit={(e) => handleList(e)} className="form">
           <div style={{ textAlign: 'center' }} >
             <label className="form__label" htmlFor="todo">~ Today I want to eat ~</label>
-            <input placeholder='Add Food Items' onChange={(e) => setItem(e.target.value)} className="form__input" type="text" id="todo" name="to-do" size={30} />
+            <input value={item} placeholder='Add Food Items' onChange={(e) => setItem(e.target.value)} className="form__input" type="text" id="todo" name="to-do" size={30} />
             <button className="button" type='submit'  ><span  >Submit</span></button>
           </div>
         </form>
