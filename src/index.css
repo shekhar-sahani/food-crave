@@ -12,6 +12,11 @@ body {
   /* text-align: center; */
   font-size: 130%;
 }
+:root {
+  --toastify-font-family: sans-serif;
+}
+
+
 
 @media only screen and (min-width: 500px) {
   body {
