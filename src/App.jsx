@@ -16,7 +16,8 @@ function App() {
   const [foodListModal, setFoodListModal] = useState(false)
 
 
-  const url = 'https://crave-database.herokuapp.com'
+  // const url = 'https://crave-database.herokuapp.com'
+  const url  = 'http://127.0.0.1:8000'
 
   const handleList = (e) => {
     e.preventDefault()
@@ -77,7 +78,7 @@ function App() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ food_name: item })
     };
-    const response = await fetch(`${url}/create/food_list`, requestOptions);
+    const response = await fetch(`${url}/food_list/`, requestOptions);
     const responseData = await response.json();
     console.log('res', responseData, response.status)
     if (response.status === 201) {
@@ -94,7 +95,7 @@ function App() {
       method: 'DELETE',
       headers: { 'Content-Type': 'application/json' },
     };
-    const response = await fetch(`${url}/delete/food_list/${item.id}`, requestOptions);
+    const response = await fetch(`${url}/food_list/delete/${item.id}/`, requestOptions);
     console.log('res', response)
     getFoodList()
     toast.error(`deleted ${item.food_name}`, {
