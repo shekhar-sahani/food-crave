@@ -16,8 +16,8 @@ function App() {
   const [foodListModal, setFoodListModal] = useState(false)
 
 
-  // const url = 'https://crave-database.herokuapp.com'
-  const url  = 'http://127.0.0.1:8000'
+  const url = 'http://15.206.84.96'
+  // const url  = 'http://127.0.0.1:8000'
 
   const handleList = (e) => {
     e.preventDefault()
