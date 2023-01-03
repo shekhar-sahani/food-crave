@@ -16,7 +16,7 @@ function App() {
   const [foodListModal, setFoodListModal] = useState(false)
 
 
-  const url = 'http://15.206.84.96:8000'
+  const url = 'https://scraper.updatefolks.link'
   // const url  = 'http://127.0.0.1:8000'
 
   const handleList = (e) => {
